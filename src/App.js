@@ -1,11 +1,11 @@
-import Home from './Components/Home';
+import Slider from './Components/Slider/Slider';
 import './index.scss';
 
 function App() {
   return (
 
     <div className="App">
-      <Home />
+      <Slider />
     </div>
   );
 }

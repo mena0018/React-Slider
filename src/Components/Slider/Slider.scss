@@ -1,0 +1,56 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+
+.container-slider {
+  max-width: 700px;
+  height: 500px;
+  margin: 100px auto 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .container-slider {
+    margin: 100px 10px 0;
+  }
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+
+  & img {
+    @include img-resize(100%);
+  }
+
+  &.active-anim {
+    opacity: 1;
+  }
+}
+
+.container-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid $light-grey;
+    margin: 0 5px;
+    background: #f1f1f1;
+
+    &.active {
+      background: rgb(32, 32, 32);
+    }
+  }
+}

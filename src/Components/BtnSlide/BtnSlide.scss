@@ -1,0 +1,32 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+
+.btn-slide {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $light-grey;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  @include align-flex(center);
+  cursor: pointer;
+
+  & img {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+}
+
+.prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
