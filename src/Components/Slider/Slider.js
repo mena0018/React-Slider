@@ -19,6 +19,9 @@ export default function Slider() {
         else if (indexSlider === data.length) setIndexSlider(1)
     }
 
+    
+    const changeImg = (index) => setIndexSlider(index);
+
 
   return (
         <div className='container-slider'>
@@ -38,7 +41,8 @@ export default function Slider() {
 
             <div className="container-dots">
                 { Array.from({ length:5 }).map((item, index) => {
-                    return <div className={indexSlider === index + 1 ? "dot active" : "dot"}></div>
+                    return <div onClick={() => changeImg(index + 1)}
+                    className={indexSlider === index + 1 ? "dot active" : "dot"}></div>
                 })}
             </div>
         </div>
